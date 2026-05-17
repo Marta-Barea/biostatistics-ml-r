@@ -302,7 +302,7 @@ A la vista de los resultados obtenidos, se observa que el modelo de *Random Fore
 
 Asimismo, dada la naturaleza del algoritmo de *Random Forest*, es posible analizar la importancia relativa de las variables predictoras dentro del modelo. En este caso, la importancia de variables se calcula mediante dos métricas principales: el aumento de la precisión (Mean Decrease Accuracy) y la disminución de la impureza (Mean Decrease Gini). 
 
-```{r, fig.width=6, fig.height=4.5}
+```{r, fig.width=6, fig.height=4.0}
 # Gráfico de importancia de variables
 varImpPlot(
   modelo_rf,
@@ -930,18 +930,6 @@ shinyApp(ui = ui, server = server)
 
 La aplicación desarrollada permite representar gráficamente distintas variables del dataset `iris`, aplicar filtros dinámicos según la especie seleccionada, visualizar resúmenes estadísticos y descargar los datos filtrados en formato CSV.
 
-Además, el gráfico incorpora títulos dinámicos, estilos personalizados y una interfaz moderna que mejora considerablemente la experiencia de usuario.
-
-**d)**
-
-Dentro de una aplicación Shiny, el componente `ui` (*user interface*) se encarga de definir la interfaz gráfica que visualizará el usuario, incluyendo botones, selectores, gráficos y tablas.
-
-Por su parte, el componente `server` contiene toda la lógica de la aplicación, es decir, las instrucciones necesarias para procesar datos y generar resultados dinámicos en función de las acciones realizadas por el usuario.
-
-Finalmente, el concepto `reactive` permite crear objetos reactivos que se actualizan automáticamente cuando cambian los valores de entrada de la aplicación. Esto constituye uno de los elementos fundamentales de Shiny, ya que permite que gráficos, tablas y resultados se modifiquen en tiempo real de manera automática e interactiva.
-
-**Resultados de la aplicación**
-
 A continuación, se muestran distintas capturas de la aplicación desarrollada, donde se puede observar la interfaz principal, el gráfico interactivo, el resumen estadístico y la tabla dinámica de datos filtrados.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -972,16 +960,21 @@ image_write(
 
 ```
 
-```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap='Capturas de la aplicación Shiny desarrollada para la exploración interactiva del dataset iris. Se muestran la interfaz principal, el gráfico dinámico, el resumen estadístico y la tabla interactiva de datos filtrados.'}
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.pos='H', fig.cap='Capturas de la aplicación Shiny desarrollada para la exploración interactiva del dataset iris. Se muestran la interfaz principal, el gráfico dinámico, el resumen estadístico y la tabla interactiva de datos filtrados.'}
 
-# Mostrar la imagen combinada con las capturas de pantalla
 knitr::include_graphics(
   "~/Documents/GitHub/biostatistics-ml-r/assets/images/shiny_app_grid.png"
 )
 
 ```
 
-La aplicación final combina análisis estadístico, visualización interactiva y diseño moderno en una única interfaz desarrollada con `Shiny`. Gracias al uso de elementos reactivos, el usuario puede explorar los datos de forma dinámica e intuitiva, facilitando tanto el análisis exploratorio como la interpretación visual de la información.
+**d)**
+
+Dentro de una aplicación Shiny, el componente `ui` (*user interface*) se encarga de definir la interfaz gráfica que visualizará el usuario, incluyendo botones, selectores, gráficos y tablas.
+
+Por su parte, el componente `server` contiene toda la lógica de la aplicación, es decir, las instrucciones necesarias para procesar datos y generar resultados dinámicos en función de las acciones realizadas por el usuario.
+
+Finalmente, el concepto `reactive` permite crear objetos reactivos que se actualizan automáticamente cuando cambian los valores de entrada de la aplicación. Esto constituye uno de los elementos fundamentales de Shiny, ya que permite que gráficos, tablas y resultados se modifiquen en tiempo real de manera automática e interactiva.
 
 ## Ejercicio 4. Ética en aplicaciones Shiny
 
