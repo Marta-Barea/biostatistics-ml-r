@@ -536,7 +536,7 @@ Dado que el resultado del ANOVA es significativo, se procede a realizar una prue
 TukeyHSD(modelo_anova)
 ```
 
-Los resultados muestran diferencias significativas entre prácticamente todos los pares de grupos comparados. En general, la humedad aumenta progresivamente desde H1 hasta H4, observándose diferencias especialmente marcadas entre los grupos extremos (`H1` y `H4`).
+Los resultados muestran diferencias significativas entre todos los pares de grupos comparados. En general, la humedad aumenta progresivamente desde H1 hasta H4, observándose diferencias especialmente marcadas entre los grupos extremos (`H1` y `H4`).
 
 Estos resultados refuerzan la evidencia obtenida previamente en el ANOVA y sugieren que el incremento de densidad vegetal se asocia con mayores niveles de humedad en el suelo.
 
